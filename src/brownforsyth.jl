@@ -1,4 +1,4 @@
-struct BrownForsythTest <: HypothesisTests.HypothesisTest 
+struct BrownForsythTest <: HypothesisTests.HypothesisTest
     F::Float64      #test statistics
     ng::Int64       #number of groups
     N::Int64        #number of observations
@@ -15,7 +15,7 @@ end
 
 
 function pvalue(x::BrownForsythTest; tail=:right)
-    pv = NaN 
+    pv = NaN
     if tail == :right
         pv = 1-cdf(FDist(x.ng, x.N-x.ng+1), x.F)
     end

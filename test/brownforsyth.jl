@@ -15,7 +15,7 @@ F = HT.BrownForsyth(x, group)
 group = rand(1:3, 1000)
 x = σ[group].*randn(1000)
 F = HT.BrownForsyth(x, group)
-@test pvalue(F) ≈ 0.006959798508421544 
+@test pvalue(F) ≈ 0.006959798508421544
 
 #test3: very similar variances
 σ = [2.1, 2.0, 2.05]
